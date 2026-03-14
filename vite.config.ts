@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig(() => ({
   server: {
     host: true, // Isso expõe o servidor para a rede do ambiente virtual
-    port: 8080,
+    port: 3000,
     strictPort: true,
   },
   plugins: [dyadComponentTagger(), react()],
