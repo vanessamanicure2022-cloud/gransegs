@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Menu, X, Cpu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -27,23 +27,20 @@ const Navbar = () => {
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
       isScrolled 
-        ? "bg-white/95 backdrop-blur-md border-zinc-200 py-3 shadow-sm" 
-        : "bg-white border-transparent py-5"
+        ? "bg-white/95 backdrop-blur-md border-zinc-200 py-2 shadow-sm" 
+        : "bg-white border-transparent py-4"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative">
-            <Shield className="text-[#001F3F] w-8 h-8" />
-            <Cpu className="text-[#38BDF8] w-4 h-4 absolute -bottom-1 -right-1" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-xl font-black tracking-tighter text-[#001F3F]">
-              ANBERC
-            </span>
-            <span className="text-[10px] font-bold tracking-[0.2em] text-[#778899]">
-              SYSTEM SECURITY
-            </span>
-          </div>
+          <img 
+            src="/logo.png" 
+            alt="Anberc System Security" 
+            className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
+            onError={(e) => {
+              // Fallback caso a imagem não exista ainda
+              e.currentTarget.src = "https://placeholder.com/150x50?text=ANBERC";
+            }}
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -52,12 +49,12 @@ const Navbar = () => {
             <Link 
               key={link.name} 
               to={link.path}
-              className="text-sm font-semibold text-[#333333] hover:text-[#38BDF8] transition-colors"
+              className="text-sm font-bold text-[#333333] hover:text-[#38BDF8] transition-colors uppercase tracking-wider"
             >
               {link.name}
             </Link>
           ))}
-          <Button className="bg-[#001F3F] hover:bg-[#002d5c] text-white font-bold rounded-lg px-6">
+          <Button className="bg-[#001F3F] hover:bg-[#002d5c] text-white font-bold rounded-lg px-6 h-11">
             Solicitar Orçamento
           </Button>
         </div>
@@ -67,24 +64,24 @@ const Navbar = () => {
           className="md:hidden text-[#001F3F]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X /> : <Menu />}
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-zinc-200 p-4 flex flex-col gap-4 animate-in slide-in-from-top duration-300">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-zinc-200 p-6 flex flex-col gap-4 animate-in slide-in-from-top duration-300 shadow-xl">
           {navLinks.map((link) => (
             <Link 
               key={link.name} 
               to={link.path}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-lg font-medium text-[#333333] py-2"
+              className="text-lg font-bold text-[#333333] py-2 border-b border-zinc-50"
             >
               {link.name}
             </Link>
           ))}
-          <Button className="bg-[#001F3F] text-white font-bold w-full py-6">
+          <Button className="bg-[#001F3F] text-white font-bold w-full py-7 text-lg mt-2">
             Solicitar Orçamento
           </Button>
         </div>

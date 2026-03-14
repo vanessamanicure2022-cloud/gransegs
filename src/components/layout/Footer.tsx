@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Instagram, Facebook, Linkedin, Mail, Phone, MapPin, Cpu } from 'lucide-react';
+import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,19 +10,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="relative">
-                <Shield className="text-[#38BDF8] w-8 h-8" />
-                <Cpu className="text-white w-4 h-4 absolute -bottom-1 -right-1" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-xl font-black tracking-tighter text-white">
-                  ANBERC
-                </span>
-                <span className="text-[10px] font-bold tracking-[0.2em] text-[#38BDF8]">
-                  SYSTEM SECURITY
-                </span>
-              </div>
+            <Link to="/" className="inline-block">
+              <img 
+                src="/logo.png" 
+                alt="Anberc System Security" 
+                className="h-16 w-auto brightness-0 invert" // Inverte para branco no fundo escuro
+              />
             </Link>
             <p className="text-white/60 leading-relaxed text-sm">
               Líder em sistemas integrados de segurança, elétrica e climatização. Tecnologia e confiança para sua proteção.
