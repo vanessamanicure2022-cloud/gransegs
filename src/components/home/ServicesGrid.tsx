@@ -1,62 +1,55 @@
 "use client";
 
 import React from 'react';
-import { Camera, Shield, Bell, Fingerprint, Zap, MonitorDot } from 'lucide-react';
+import { Shield, Zap, Wind, Settings, Cpu } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const services = [
   {
-    title: 'Monitoramento 24h',
-    description: 'Central de operações táticas pronta para agir em qualquer sinal de intrusão.',
-    icon: MonitorDot,
+    title: 'Segurança Eletrônica',
+    description: 'Monitoramento inteligente, CFTV de alta definição e controle de acesso biométrico.',
+    icon: Shield,
   },
   {
-    title: 'CFTV Inteligente',
-    description: 'Câmeras IP com reconhecimento facial e análise de comportamento por IA.',
-    icon: Camera,
-  },
-  {
-    title: 'Controle de Acesso',
-    description: 'Biometria, reconhecimento facial e tags para gestão total de fluxo.',
-    icon: Fingerprint,
-  },
-  {
-    title: 'Alarmes Monitorados',
-    description: 'Sensores de alta precisão conectados diretamente à nossa central.',
-    icon: Bell,
-  },
-  {
-    title: 'Cercas e Concertinas',
-    description: 'Proteção perimetral física e eletrônica de alta voltagem e resistência.',
+    title: 'Engenharia Elétrica',
+    description: 'Projetos elétricos, manutenção de painéis e soluções em energia de alta performance.',
     icon: Zap,
   },
   {
-    title: 'Segurança Pessoal',
-    description: 'Soluções customizadas para proteção de executivos e familiares.',
-    icon: Shield,
+    title: 'Climatização & AC',
+    description: 'Instalação e manutenção de sistemas de ar condicionado residenciais e corporativos.',
+    icon: Wind,
+  },
+  {
+    title: 'Manutenção Preventiva',
+    description: 'Planos de revisão periódica para garantir o funcionamento ininterrupto dos seus sistemas.',
+    icon: Settings,
   },
 ];
 
 const ServicesGrid = () => {
   return (
-    <section className="py-24 bg-zinc-950">
+    <section className="py-24 bg-[#F5F5F5]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">Nossas Soluções</h2>
-          <p className="text-4xl md:text-5xl font-bold text-white mb-6">Segurança 360º para o seu patrimônio</p>
-          <p className="text-zinc-400 text-lg">Combinamos tecnologia de ponta com expertise humana para criar um ambiente impenetrável.</p>
+          <h2 className="text-[#40E0D0] font-bold uppercase tracking-widest text-sm mb-4">Excelência Técnica</h2>
+          <p className="text-4xl font-bold text-[#001F3F] mb-6">Soluções Integradas</p>
+          <p className="text-[#778899] text-lg">Tecnologia de ponta aplicada à segurança e ao conforto do seu ambiente.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="bg-zinc-900/40 border-zinc-800 hover:border-amber-500/30 transition-all duration-500 group cursor-pointer overflow-hidden relative">
-              <div className="absolute top-0 left-0 w-1 h-0 bg-amber-500 group-hover:h-full transition-all duration-500" />
+            <Card key={index} className="bg-white border-none shadow-sm hover:shadow-xl transition-all duration-500 group cursor-pointer rounded-2xl overflow-hidden">
               <CardContent className="p-8">
-                <div className="mb-6 p-3 rounded-xl bg-zinc-800 w-fit group-hover:bg-amber-500 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.4)]">
-                  <service.icon className="w-8 h-8 text-amber-500 group-hover:text-zinc-950 transition-colors" />
+                <div className="mb-6 p-4 rounded-2xl bg-[#F5F5F5] w-fit group-hover:bg-[#001F3F] transition-all duration-300">
+                  <service.icon className="w-8 h-8 text-[#40E0D0] group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">{service.title}</h3>
-                <p className="text-zinc-400 leading-relaxed">{service.description}</p>
+                <h3 className="text-xl font-bold text-[#001F3F] mb-3 group-hover:text-[#40E0D0] transition-colors">{service.title}</h3>
+                <p className="text-[#778899] leading-relaxed text-sm">{service.description}</p>
+                
+                <div className="mt-6 flex items-center text-[#001F3F] font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                  Saiba Mais <Cpu className="ml-2 w-3 h-3 text-[#40E0D0]" />
+                </div>
               </CardContent>
             </Card>
           ))}
