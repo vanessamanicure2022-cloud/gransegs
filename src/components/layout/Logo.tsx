@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { Shield } from 'lucide-react';
 
 interface LogoProps {
   className?: string;
@@ -9,25 +8,28 @@ interface LogoProps {
 }
 
 const Logo = ({ className, variant = 'default' }: LogoProps) => {
-  const isLight = variant === 'light';
-  
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <div className="relative flex items-center justify-center">
-        <Shield 
-          className={`w-8 h-8 md:w-10 md:h-10 ${isLight ? 'text-[#38BDF8]' : 'text-[#001F3F]'}`} 
-          strokeWidth={2.5}
-        />
-        <div className={`absolute w-2 h-2 rounded-full ${isLight ? 'bg-white' : 'bg-[#38BDF8]'} animate-pulse`} />
-      </div>
-      <div className="flex flex-col leading-none">
-        <span className={`text-xl md:text-2xl font-black tracking-tighter ${isLight ? 'text-white' : 'text-[#001F3F]'}`}>
-          ANBERC
-        </span>
-        <span className={`text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] ${isLight ? 'text-[#38BDF8]' : 'text-[#778899]'}`}>
-          System Security
-        </span>
-      </div>
+      <img 
+        src="/logo.png" 
+        alt="Anberc Logo" 
+        className="h-10 md:h-12 w-auto object-contain"
+        onError={(e) => {
+          // Fallback caso a imagem não seja encontrada
+          e.currentTarget.style.display = 'none';
+          e.currentTarget.parentElement!.innerHTML = `
+            <div class="flex items-center gap-2">
+              <div class="w-10 h-10 bg-[#001F3F] rounded-lg flex items-center justify-center">
+                <span class="text-[#38BDF8] font-black text-xl">A</span>
+              </div>
+              <div class="flex flex-col leading-none">
+                <span class="text-xl font-black text-[#001F3F]">ANBERC</span>
+                <span class="text-[8px] font-bold text-[#778899]">SYSTEM SECURITY</span>
+              </div>
+            </div>
+          `;
+        }}
+      />
     </div>
   );
 };
