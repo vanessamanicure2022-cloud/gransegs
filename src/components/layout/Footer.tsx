@@ -3,6 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -11,11 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <Link to="/" className="inline-block">
-              <img 
-                src="/logo.png" 
-                alt="Anberc System Security" 
-                className="h-16 w-auto brightness-0 invert" // Inverte para branco no fundo escuro
-              />
+              <Logo variant="light" />
             </Link>
             <p className="text-white/60 leading-relaxed text-sm">
               Líder em sistemas integrados de segurança, elétrica e climatização. Tecnologia e confiança para sua proteção.

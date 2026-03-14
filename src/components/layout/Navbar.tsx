@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,16 +32,8 @@ const Navbar = () => {
         : "bg-white border-transparent py-4"
     )}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <img 
-            src="/logo.png" 
-            alt="Anberc System Security" 
-            className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
-            onError={(e) => {
-              // Fallback caso a imagem não exista ainda
-              e.currentTarget.src = "https://placeholder.com/150x50?text=ANBERC";
-            }}
-          />
+        <Link to="/" className="group">
+          <Logo />
         </Link>
 
         {/* Desktop Menu */}
