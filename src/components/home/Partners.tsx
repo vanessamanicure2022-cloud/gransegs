@@ -5,7 +5,7 @@ import React from 'react';
 const partners = [
   { 
     name: 'Intelbras', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Intelbras_logo.svg/1200px-Intelbras_logo.svg.png' 
+    logo: 'https://logodownload.org/wp-content/uploads/2018/02/intelbras-logo-1.png' 
   },
   { 
     name: 'Hikvision', 
@@ -30,14 +30,23 @@ const Partners = () => {
         </p>
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20">
           {partners.map((partner) => (
-            <div key={partner.name} className="group relative">
-              <img 
-                src={partner.logo} 
-                alt={partner.name} 
-                className="h-8 md:h-10 object-contain opacity-40 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500 brightness-200"
-              />
-              {/* Tooltip sutil com o nome */}
-              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-amber-500 font-bold opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-tighter">
+            <div key={partner.name} className="group relative flex flex-col items-center">
+              <div className="h-12 flex items-center justify-center">
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name} 
+                  className="h-full max-w-[140px] object-contain opacity-60 invert brightness-0 group-hover:invert-0 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-500"
+                  onError={(e) => {
+                    // Fallback caso a imagem falhe
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
+                />
+                {/* Fallback em texto caso a imagem não carregue */}
+                <span className="text-zinc-600 font-bold text-xl hidden group-hover:text-amber-500 transition-colors">
+                  {partner.name}
+                </span>
+              </div>
+              <span className="mt-2 text-[10px] text-amber-500 font-bold opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-tighter">
                 {partner.name}
               </span>
             </div>
