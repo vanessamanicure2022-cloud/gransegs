@@ -32,7 +32,7 @@ const ServicesGrid = () => {
     <section className="py-24 bg-[#F5F5F5]">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-[#40E0D0] font-bold uppercase tracking-widest text-sm mb-4">Excelência Técnica</h2>
+          <h2 className="text-[#38BDF8] font-bold uppercase tracking-widest text-sm mb-4">Excelência Técnica</h2>
           <p className="text-4xl font-bold text-[#001F3F] mb-6">Soluções Integradas</p>
           <p className="text-[#778899] text-lg">Tecnologia de ponta aplicada à segurança e ao conforto do seu ambiente.</p>
         </div>
@@ -42,13 +42,13 @@ const ServicesGrid = () => {
             <Card key={index} className="bg-white border-none shadow-sm hover:shadow-xl transition-all duration-500 group cursor-pointer rounded-2xl overflow-hidden">
               <CardContent className="p-8">
                 <div className="mb-6 p-4 rounded-2xl bg-[#F5F5F5] w-fit group-hover:bg-[#001F3F] transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-[#40E0D0] group-hover:text-white transition-colors" />
+                  <service.icon className="w-8 h-8 text-[#38BDF8] group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-[#001F3F] mb-3 group-hover:text-[#40E0D0] transition-colors">{service.title}</h3>
+                <h3 className="text-xl font-bold text-[#001F3F] mb-3 group-hover:text-[#38BDF8] transition-colors">{service.title}</h3>
                 <p className="text-[#778899] leading-relaxed text-sm">{service.description}</p>
                 
                 <div className="mt-6 flex items-center text-[#001F3F] font-bold text-xs uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
-                  Saiba Mais <Cpu className="ml-2 w-3 h-3 text-[#40E0D0]" />
+                  Saiba Mais <Cpu className="ml-2 w-3 h-3 text-[#38BDF8]" />
                 </div>
               </CardContent>
             </Card>

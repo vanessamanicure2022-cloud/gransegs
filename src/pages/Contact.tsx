@@ -17,8 +17,8 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-[#40E0D0]/10 border border-[#40E0D0]/20 px-4 py-2 rounded-full mb-6">
-                <Cpu className="w-4 h-4 text-[#40E0D0]" />
+              <div className="inline-flex items-center gap-2 bg-[#38BDF8]/10 border border-[#38BDF8]/20 px-4 py-2 rounded-full mb-6">
+                <Cpu className="w-4 h-4 text-[#38BDF8]" />
                 <span className="text-[#001F3F] text-xs font-bold uppercase tracking-widest">Atendimento Técnico</span>
               </div>
               <h1 className="text-5xl font-bold text-[#001F3F] mb-6">Contato</h1>
@@ -32,7 +32,7 @@ const Contact = () => {
                   <div className="space-y-6">
                     <div className="flex gap-4">
                       <div className="bg-[#001F3F] p-3 rounded-xl h-fit">
-                        <MapPin className="text-[#40E0D0]" size={24} />
+                        <MapPin className="text-[#38BDF8]" size={24} />
                       </div>
                       <div>
                         <p className="text-[#778899] text-sm">Sede</p>
@@ -41,7 +41,7 @@ const Contact = () => {
                     </div>
                     <div className="flex gap-4">
                       <div className="bg-[#001F3F] p-3 rounded-xl h-fit">
-                        <Phone className="text-[#40E0D0]" size={24} />
+                        <Phone className="text-[#38BDF8]" size={24} />
                       </div>
                       <div>
                         <p className="text-[#778899] text-sm">Telefone</p>
@@ -50,7 +50,7 @@ const Contact = () => {
                     </div>
                     <div className="flex gap-4">
                       <div className="bg-[#001F3F] p-3 rounded-xl h-fit">
-                        <Mail className="text-[#40E0D0]" size={24} />
+                        <Mail className="text-[#38BDF8]" size={24} />
                       </div>
                       <div>
                         <p className="text-[#778899] text-sm">E-mail</p>
@@ -59,7 +59,7 @@ const Contact = () => {
                     </div>
                     <div className="flex gap-4">
                       <div className="bg-[#001F3F] p-3 rounded-xl h-fit">
-                        <Clock className="text-[#40E0D0]" size={24} />
+                        <Clock className="text-[#38BDF8]" size={24} />
                       </div>
                       <div>
                         <p className="text-[#778899] text-sm">Atendimento</p>
@@ -77,26 +77,26 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-[#333333] ml-1">Nome Completo</label>
-                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#40E0D0]" placeholder="Seu nome" />
+                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#38BDF8]" placeholder="Seu nome" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-[#333333] ml-1">E-mail Corporativo</label>
-                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#40E0D0]" placeholder="seu@email.com" />
+                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#38BDF8]" placeholder="seu@email.com" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-[#333333] ml-1">WhatsApp</label>
-                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#40E0D0]" placeholder="(12) 00000-0000" />
+                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#38BDF8]" placeholder="(12) 00000-0000" />
                       </div>
                       <div className="space-y-2">
                         <label className="text-sm font-bold text-[#333333] ml-1">Assunto</label>
-                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#40E0D0]" placeholder="Ex: Projeto Elétrico" />
+                        <Input className="bg-[#F5F5F5] border-transparent h-12 rounded-xl focus:ring-[#38BDF8]" placeholder="Ex: Projeto Elétrico" />
                       </div>
                     </div>
                     <div className="space-y-2">
                       <label className="text-sm font-bold text-[#333333] ml-1">Mensagem</label>
-                      <Textarea className="bg-[#F5F5F5] border-transparent min-h-[150px] rounded-xl focus:ring-[#40E0D0]" placeholder="Descreva sua necessidade técnica..." />
+                      <Textarea className="bg-[#F5F5F5] border-transparent min-h-[150px] rounded-xl focus:ring-[#38BDF8]" placeholder="Descreva sua necessidade técnica..." />
                     </div>
                     <Button className="w-full bg-[#001F3F] hover:bg-[#002d5c] text-white h-14 text-lg font-bold rounded-xl shadow-lg shadow-[#001F3F]/10">
                       Enviar Solicitação

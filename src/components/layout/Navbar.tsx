@@ -34,7 +34,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-3 group">
           <div className="relative">
             <Shield className="text-[#001F3F] w-8 h-8" />
-            <Cpu className="text-[#40E0D0] w-4 h-4 absolute -bottom-1 -right-1" />
+            <Cpu className="text-[#38BDF8] w-4 h-4 absolute -bottom-1 -right-1" />
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-xl font-black tracking-tighter text-[#001F3F]">
@@ -52,7 +52,7 @@ const Navbar = () => {
             <Link 
               key={link.name} 
               to={link.path}
-              className="text-sm font-semibold text-[#333333] hover:text-[#40E0D0] transition-colors"
+              className="text-sm font-semibold text-[#333333] hover:text-[#38BDF8] transition-colors"
             >
               {link.name}
             </Link>

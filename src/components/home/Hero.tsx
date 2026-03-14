@@ -14,14 +14,14 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#40E0D0]/10 border border-[#40E0D0]/20 px-4 py-2 rounded-full mb-8">
-            <ShieldCheck className="w-4 h-4 text-[#40E0D0]" />
+          <div className="inline-flex items-center gap-2 bg-[#38BDF8]/10 border border-[#38BDF8]/20 px-4 py-2 rounded-full mb-8">
+            <ShieldCheck className="w-4 h-4 text-[#38BDF8]" />
             <span className="text-[#001F3F] text-xs font-bold uppercase tracking-widest">Fortificação Digital e Estrutural</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-extrabold text-[#001F3F] leading-tight mb-8">
             Sistemas Integrados de <br />
-            <span className="text-[#40E0D0]">Segurança e Climatização</span>
+            <span className="text-[#38BDF8]">Segurança e Climatização</span>
           </h1>
           
           <p className="text-xl text-[#778899] mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -29,7 +29,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-[#40E0D0] hover:bg-[#36c4b6] text-white font-bold px-10 py-7 text-lg rounded-xl shadow-lg shadow-[#40E0D0]/20 border-none">
+            <Button size="lg" className="bg-[#38BDF8] hover:bg-[#0EA5E9] text-white font-bold px-10 py-7 text-lg rounded-xl shadow-lg shadow-[#38BDF8]/20 border-none">
               Nossos Serviços
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

@@ -30,7 +30,7 @@ const Testimonials = () => {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-[#40E0D0] font-bold uppercase tracking-widest text-sm mb-4">Depoimentos</h2>
+          <h2 className="text-[#38BDF8] font-bold uppercase tracking-widest text-sm mb-4">Depoimentos</h2>
           <p className="text-4xl font-bold text-[#001F3F] mb-6">O que nossos clientes dizem</p>
           <p className="text-[#778899] text-lg">A confiança de quem já protege seu patrimônio com a inteligência da Anberc.</p>
         </div>
@@ -44,7 +44,7 @@ const Testimonials = () => {
               <CardContent className="p-8">
                 <div className="flex gap-1 mb-6">
                   {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-[#40E0D0] text-[#40E0D0]" />
+                    <Star key={i} className="w-4 h-4 fill-[#38BDF8] text-[#38BDF8]" />
                   ))}
                 </div>
                 <p className="text-[#333333] italic mb-8 leading-relaxed">
@@ -52,7 +52,7 @@ const Testimonials = () => {
                 </p>
                 <div>
                   <p className="text-[#001F3F] font-bold">{t.name}</p>
-                  <p className="text-[#40E0D0] text-sm font-semibold">{t.role}</p>
+                  <p className="text-[#38BDF8] text-sm font-semibold">{t.role}</p>
                 </div>
               </CardContent>
             </Card>

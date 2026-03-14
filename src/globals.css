@@ -16,13 +16,13 @@
     --primary: 220 100% 15%; /* Azul Marinho Profundo */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 174 72% 56%; /* Azul Ciano #40E0D0 */
+    --secondary: 199 89% 60%; /* Azul Claro #38BDF8 */
     --secondary-foreground: 220 100% 15%;
 
     --muted: 210 20% 96%; /* Cinza muito claro #F5F5F5 */
     --muted-foreground: 210 10% 45%;
 
-    --accent: 174 72% 56%;
+    --accent: 199 89% 60%;
     --accent-foreground: 220 100% 15%;
 
     --destructive: 0 84.2% 60.2%;
