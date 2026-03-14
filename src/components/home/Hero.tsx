@@ -7,27 +7,29 @@ import { ShieldCheck, ArrowRight, Play } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-zinc-950">
-      {/* Background Overlay/Video Placeholder */}
+      {/* Background Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/70 to-transparent z-10" />
         <img 
           src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=2000" 
           alt="Security Monitoring" 
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-30"
         />
+        {/* Gold Glow Effect */}
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-500/20 px-4 py-2 rounded-full mb-6 animate-fade-in">
-            <ShieldCheck className="w-4 h-4 text-blue-500" />
-            <span className="text-blue-400 text-xs font-bold uppercase tracking-widest">Tecnologia de Alta Performance</span>
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 px-4 py-2 rounded-full mb-6 animate-fade-in">
+            <ShieldCheck className="w-4 h-4 text-amber-500" />
+            <span className="text-amber-500 text-xs font-bold uppercase tracking-widest">Tecnologia de Alta Performance</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
             Sua segurança <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">
-              não pode esperar.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-200">
+              em nível máximo.
             </span>
           </h1>
           
@@ -36,12 +38,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-7 text-lg rounded-xl group">
+            <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold px-8 py-7 text-lg rounded-xl group shadow-lg shadow-amber-500/20">
               Proteger meu Patrimônio
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="border-zinc-700 text-white hover:bg-zinc-800 px-8 py-7 text-lg rounded-xl">
-              <Play className="mr-2 w-5 h-5 fill-current" />
+            <Button size="lg" variant="outline" className="border-zinc-700 text-white hover:bg-zinc-800 hover:border-amber-500/50 px-8 py-7 text-lg rounded-xl">
+              <Play className="mr-2 w-5 h-5 fill-amber-500 text-amber-500" />
               Ver Como Funciona
             </Button>
           </div>
