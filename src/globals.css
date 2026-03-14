@@ -5,34 +5,34 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 20% 20%;
+    --foreground: 222 47% 11%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 210 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 20%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 220 100% 15%; /* Azul Marinho Profundo */
-    --primary-foreground: 0 0% 100%;
+    --primary: 215 100% 12%; /* Azul Marinho Profundo do Logo */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 199 89% 60%; /* Azul Claro #38BDF8 */
-    --secondary-foreground: 220 100% 15%;
+    --secondary: 199 89% 48%; /* Azul Cyan do Logo */
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 210 20% 96%; /* Cinza muito claro #F5F5F5 */
-    --muted-foreground: 210 10% 45%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 199 89% 60%;
-    --accent-foreground: 220 100% 15%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 220 100% 15%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 199 89% 48%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
   }
 }
 
@@ -44,9 +44,6 @@
     @apply bg-background text-foreground antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply text-[#333333] font-bold;
-  }
-  p {
-    @apply text-[#778899];
+    @apply text-[#001F3F] font-bold tracking-tight;
   }
 }
