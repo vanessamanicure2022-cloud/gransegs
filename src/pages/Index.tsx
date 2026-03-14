@@ -3,6 +3,7 @@
 import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/home/Hero';
+import Partners from '@/components/home/Partners';
 import ServicesGrid from '@/components/home/ServicesGrid';
 import About from '@/components/home/About';
 import Testimonials from '@/components/home/Testimonials';
@@ -18,6 +19,8 @@ const Index = () => {
       <main>
         <Hero />
         
+        <Partners />
+        
         <ServicesGrid />
         
         <About />
@@ -28,7 +31,6 @@ const Index = () => {
         <section className="py-24 bg-[#F5F5F5]">
           <div className="container mx-auto px-4">
             <div className="bg-[#001F3F] rounded-[2rem] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
-              {/* Decorative Circuit Element */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#40E0D0]/10 rounded-full -mr-32 -mt-32 blur-3xl" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#40E0D0]/5 rounded-full -ml-32 -mb-32 blur-3xl" />
               
@@ -49,7 +51,7 @@ const Index = () => {
 
       <Footer />
 
-      {/* WhatsApp Floating Button - Anberc Style */}
+      {/* WhatsApp Floating Button */}
       <a 
         href="https://wa.me/5512999999999" 
         target="_blank" 

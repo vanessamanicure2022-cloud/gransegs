@@ -8,51 +8,51 @@ const testimonials = [
   {
     name: "Ricardo Almeida",
     role: "Síndico - Ed. Horizonte",
-    content: "A Granseg's transformou a segurança do nosso condomínio. A portaria remota funciona perfeitamente e a equipe técnica é extremamente ágil.",
+    content: "A Anberc transformou a segurança do nosso condomínio. A integração dos sistemas funciona perfeitamente e a equipe técnica é extremamente profissional.",
     rating: 5
   },
   {
     name: "Mariana Costa",
     role: "Proprietária - Loja Fashion",
-    content: "O sistema de CFTV com inteligência artificial me dá total tranquilidade. Consigo monitorar tudo pelo celular com uma nitidez impressionante.",
+    content: "O sistema de climatização e CFTV me dá total tranquilidade. Consigo monitorar tudo pelo celular com uma nitidez impressionante.",
     rating: 5
   },
   {
     name: "Dr. Carlos Eduardo",
     role: "Residência Particular",
-    content: "Excelente atendimento desde o orçamento até a instalação. A cerca elétrica e o sistema de alarme são de altíssima qualidade.",
+    content: "Excelente atendimento desde o orçamento até a instalação. A engenharia elétrica e o sistema de alarme são de altíssima qualidade.",
     rating: 5
   }
 ];
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-zinc-900/20">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">Depoimentos</h2>
-          <p className="text-4xl font-bold text-white mb-6">O que nossos clientes dizem</p>
-          <p className="text-zinc-400 text-lg">A confiança de quem já protege seu patrimônio com a inteligência da Granseg's.</p>
+          <h2 className="text-[#40E0D0] font-bold uppercase tracking-widest text-sm mb-4">Depoimentos</h2>
+          <p className="text-4xl font-bold text-[#001F3F] mb-6">O que nossos clientes dizem</p>
+          <p className="text-[#778899] text-lg">A confiança de quem já protege seu patrimônio com a inteligência da Anberc.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t, index) => (
-            <Card key={index} className="bg-zinc-900/40 border-zinc-800 relative overflow-hidden group">
+            <Card key={index} className="bg-[#F5F5F5] border-none relative overflow-hidden group hover:shadow-xl transition-all duration-500">
               <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-12 h-12 text-amber-500" />
+                <Quote className="w-12 h-12 text-[#001F3F]" />
               </div>
               <CardContent className="p-8">
                 <div className="flex gap-1 mb-6">
                   {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-500 text-amber-500" />
+                    <Star key={i} className="w-4 h-4 fill-[#40E0D0] text-[#40E0D0]" />
                   ))}
                 </div>
-                <p className="text-zinc-300 italic mb-8 leading-relaxed">
+                <p className="text-[#333333] italic mb-8 leading-relaxed">
                   "{t.content}"
                 </p>
                 <div>
-                  <p className="text-white font-bold">{t.name}</p>
-                  <p className="text-amber-500/70 text-sm">{t.role}</p>
+                  <p className="text-[#001F3F] font-bold">{t.name}</p>
+                  <p className="text-[#40E0D0] text-sm font-semibold">{t.role}</p>
                 </div>
               </CardContent>
             </Card>
