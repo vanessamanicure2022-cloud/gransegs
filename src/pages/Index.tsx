@@ -26,7 +26,7 @@ const Index = () => {
                 <div className="absolute -top-4 -left-4 w-24 h-24 bg-amber-500/10 rounded-full blur-3xl" />
                 <img 
                   src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Equipe Gransegs" 
+                  alt="Equipe Granseg's" 
                   className="rounded-2xl border border-zinc-800 shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-amber-500 p-6 rounded-2xl shadow-xl z-20 hidden md:block">
@@ -36,7 +36,7 @@ const Index = () => {
               </div>
               
               <div>
-                <h2 className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">Sobre a Gransegs</h2>
+                <h2 className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4">Sobre a Granseg's</h2>
                 <h3 className="text-4xl font-bold text-white mb-6">Compromisso inabalável com a sua tranquilidade</h3>
                 <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
                   Nascemos com o propósito de elevar o padrão da segurança eletrônica no Brasil. Não entregamos apenas equipamentos, entregamos uma estratégia completa de proteção baseada em inteligência e resposta rápida.

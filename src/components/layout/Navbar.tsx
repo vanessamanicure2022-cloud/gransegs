@@ -37,7 +37,7 @@ const Navbar = () => {
             <Shield className="text-zinc-950 w-6 h-6" />
           </div>
           <span className="text-2xl font-bold tracking-tighter text-white">
-            GRAN<span className="text-amber-500">SEGS</span>
+            GRANSEG<span className="text-amber-500">'S</span>
           </span>
         </Link>
 
