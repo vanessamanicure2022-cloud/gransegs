@@ -5,6 +5,7 @@ import Navbar from '@/components/layout/Navbar';
 import Hero from '@/components/home/Hero';
 import Partners from '@/components/home/Partners';
 import ServicesGrid from '@/components/home/ServicesGrid';
+import Testimonials from '@/components/home/Testimonials';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { MessageCircle, ShieldCheck, Users, Building2, Home as HomeIcon } from 'lucide-react';
@@ -88,6 +89,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <Testimonials />
 
         {/* CTA Final */}
         <section className="py-24">
