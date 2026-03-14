@@ -38,11 +38,16 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold px-8 py-7 text-lg rounded-xl group shadow-lg shadow-amber-500/20">
+            <Button size="lg" className="bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold px-8 py-7 text-lg rounded-xl group shadow-lg shadow-amber-500/20 border-none">
               Proteger meu Patrimônio
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="border-zinc-700 text-white hover:bg-zinc-800 hover:border-amber-500/50 px-8 py-7 text-lg rounded-xl">
+            
+            {/* Botão Corrigido: Sem variant outline para evitar o fundo branco indesejado */}
+            <Button 
+              size="lg" 
+              className="bg-zinc-900/50 border border-zinc-700 text-white hover:bg-zinc-800 hover:border-amber-500/50 active:bg-zinc-950 px-8 py-7 text-lg rounded-xl transition-all duration-300"
+            >
               <Play className="mr-2 w-5 h-5 fill-amber-500 text-amber-500" />
               Ver Como Funciona
             </Button>
