@@ -9,30 +9,32 @@ const SessionContext = createContext<{
   signOut: () => Promise<void>;
 } | null>(null);
 
-export const SessionProvider = ({ children }) => {
-  const [session, setSession] = useState(null);
-  const [user, setUser] = useState(null);
+export const SessionProvider = ({ children }: { children: React.ReactNode }) => {
+  const [session, setSession] = useState<any>(null);
+  const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    // Get initial session
-    setSession(supabase.auth.getSession());
-    setUser(supabase.auth.user());
-
-    // Listen for auth state changes
-    const { data } = supabase.auth.onAuthStateChange((event, session) => {
+    // Busca a sessão inicial de forma assíncrona
+    supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
-      setUser(session?.user);
+      setUser(session?.user ?? null);
+    });
+
+    // Escuta mudanças no estado de autenticação
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      setUser(session?.user ?? null);
     });
 
     return () => {
-      data.subscription.unsubscribe();
+      subscription.unsubscribe();
     };
   }, []);
 
   const signOut = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
-      console.error('Error signing out:', error);
+      console.error('Erro ao sair:', error);
       throw error;
     }
   };
@@ -47,7 +49,7 @@ export const SessionProvider = ({ children }) => {
 export const useSession = () => {
   const context = useContext(SessionContext);
   if (!context) {
-    throw new Error('useSession must be used within a SessionProvider');
+    throw new Error('useSession deve ser usado dentro de um SessionProvider');
   }
   return context;
 };
