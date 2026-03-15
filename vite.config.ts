@@ -5,7 +5,7 @@ import path from "path";
 
 export default defineConfig(() => ({
   server: {
-    host: true, // Isso expõe o servidor para a rede do ambiente virtual
+    host: true,
     port: 3000,
     strictPort: true,
   },
@@ -13,6 +13,14 @@ export default defineConfig(() => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    target: "es2015",
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
     },
   },
 }));
