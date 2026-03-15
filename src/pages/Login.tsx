@@ -17,7 +17,7 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
@@ -28,7 +28,9 @@ const LoginPage = () => {
         password,
       });
 
-      if (supabaseError) throw supabaseError;
+      if (supabaseError) {
+        throw supabaseError;
+      }
       
       // Redirect to home page after successful login
       navigate('/');
@@ -91,8 +93,7 @@ const LoginPage = () => {
               Senha
             </Label>
             <div className="relative">
-              <Input
-                id="password"
+              <Input                id="password"
                 type={showPassword ? 'text' : 'password'}
                 autoComplete="current-password"
                 required
