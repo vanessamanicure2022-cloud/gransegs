@@ -3,8 +3,9 @@
 import React from 'react';
 import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
-import MetricsCards from '@/components/Dashboard/MetricsCards';
-import RevenueChart from '@/components/Dashboard/RevenueChart';
+import MetricsCards from '@/components/dashboard/MetricsCards';
+import RevenueChart from '@/components/dashboard/RevenueChart';
+import { Card, CardContent } from '@/components/ui/card';
 
 const Dashboard = () => {
   return (
