@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Logo from './Logo';
 import LoginButton from './LoginButton';
-import { useState } from 'react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +40,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link               key={link.name} 
+            <Link key={link.name} 
               to={link.path}
               className="text-sm font-bold text-[#333333] hover:text-[#38BDF8] transition-colors uppercase tracking-wider"
             >
@@ -55,7 +54,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button           className="md:hidden text-[#001F3F]"
+        <button className="md:hidden text-[#001F3F]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
