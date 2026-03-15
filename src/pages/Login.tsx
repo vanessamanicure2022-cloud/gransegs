@@ -1,4 +1,4 @@
-use client;
+"use client";
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -139,7 +139,7 @@ const LoginPage = () => {
           <p className="text-center text-sm text-gray-500">
             Não tem uma conta?
             <Link
-              href="/login"
+              to="/login"
               className="font-medium text-[#38BDF8] hover:text-[#0EA5E9] ml-1"
             >
               Cadastre-se
