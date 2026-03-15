@@ -6,6 +6,8 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Logo from './Logo';
+import LoginButton from './LoginButton';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,8 +41,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link               key={link.name} 
               to={link.path}
               className="text-sm font-bold text-[#333333] hover:text-[#38BDF8] transition-colors uppercase tracking-wider"
             >
@@ -50,11 +51,11 @@ const Navbar = () => {
           <Button className="bg-[#001F3F] hover:bg-[#002d5c] text-white font-bold rounded-lg px-6 h-11">
             Solicitar Orçamento
           </Button>
+          <LoginButton />
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className="md:hidden text-[#001F3F]"
+        <button           className="md:hidden text-[#001F3F]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -77,6 +78,7 @@ const Navbar = () => {
           <Button className="bg-[#001F3F] text-white font-bold w-full py-7 text-lg mt-2">
             Solicitar Orçamento
           </Button>
+          <LoginButton />
         </div>
       )}
     </nav>
